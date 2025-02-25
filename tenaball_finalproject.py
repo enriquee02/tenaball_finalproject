@@ -3,6 +3,21 @@ import random
 #10 list that needs to be completed by the player
 
 def tenaball():
+    """
+    Function that is a game where players guess top 10 footballers based on a given category.
+    The player will have 3 lives to complete the list.
+    :param barcelona_signings: List of top 10 most expensive FC Barcelona signings.
+    :param degea_app: list of players with the most appearances with David de Gea.
+    :param juve_real: List of players with the most combined appearances for Juventus and Real Madrid.
+    :param spain_app: List of top 10 Spanish players with the most caps
+    :param top_goals: List of top 10 all time goalscorers
+    :param random_tenaball: will select one of the categories at random
+    :param category: The string of the randomly selected category.
+    :param correct_answer: List used during to track correctly guessed players
+    :param lives: Number of lives that the player has
+    :param position: Shows which number the guessed player takes on that list
+    :return: None
+    """
     #each category has been chosen one by one
     #barcelonas most expensive signings
 
@@ -49,7 +64,7 @@ def tenaball():
 
         while lives > 0 and len(correct_answer) < 10:
             print(f"\nYou have {lives} lives left")
-            player = input("Enter a player's name")
+            player = input("Enter a player's full name")
 
         #check if guessed player is in the top 10
             if player in random_tenaball and player not in correct_answer:
