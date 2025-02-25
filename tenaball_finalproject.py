@@ -1,6 +1,5 @@
 import random
-#random will be used so that python will choose a random top
-#10 list that needs to be completed by the player
+# Select a random top 10 category for the game
 
 def tenaball():
     """
@@ -39,6 +38,18 @@ def tenaball():
 
     top_goals = ["Cristiano Ronaldo", "Lionel Messi", "Pele", "Romario", "Ferenc Puskas", "Josef Bican", "Robert Lewandowski", "Jimmy Jones", "Gerd Muller", "Joe Bambrick"]
 
+    #most appearances with teammate Antony
+
+    antony_app = ["Lisandro Martinez", "Bruno Fernandes", "Dusan Tadic", "Andre Onana", "Diogo Dalot", "Ryan Gravenberch", "Casemiro", "Davy Klaassen", "Daley Blind", "Edson Alvarez" ]
+
+    #most used players by coach Carlo Ancelotti at Real Madrid
+
+    ancelotti_used = ["Luka Modric", "Dani Carvajal", "Karim Benzema", "Federico Valverde", "Toni Kroos", "Vinicius Junior", "Thibaut Courtois", "Rodrygo", "Antonio Rudiger", "Nacho Fernandez"]
+
+    #most used players by coach Luis Suarez at Fc Barcelona
+
+    lEnrique_used = ["Lionel Messi", "Luis Suarez", "Neymar Jr", "Sergio Busquets", "Gerard Pique", "Javier Mascherano", "Ivan Rakitic", "Jordi Alba", "Andres Iniesta", "Ter Stegen"]
+
     #code to chose the tenaball that the player will face
 
     random_tenaball, category  = random.choice([
@@ -46,7 +57,10 @@ def tenaball():
         (degea_app, "most appearances with teammate David de Gea"),
         (juve_real, "players with the most combined appearances for Juventus and Real Madrid"),
         (spain_app, "players with the most caps for the Spanish National Team"),
-        (top_goals, "all time goalscorers")
+        (top_goals, "all time goalscorers"),
+        (antony_app, "players with most appearances with teammate Antony"),
+        (ancelotti_used, "most used players by coach Ancelotti at Real Madrid"),
+        (lEnrique_used, "most used players by coach lEnrique at Fc Barcelona"),
     ])
 
     #so that we can track how many the player has guessed
