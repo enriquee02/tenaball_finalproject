@@ -3,24 +3,15 @@ import random
 
 def tenaball():
     """
-    Function that is a game where players guess top 10 footballers based on a given category.
-    The player will have 3 lives to complete the list.
-    :param barcelona_signings: List of top 10 most expensive FC Barcelona signings.
-    :param degea_app: list of players with the most appearances with David de Gea.
-    :param juve_real: List of players with the most combined appearances for Juventus and Real Madrid.
-    :param spain_app: List of top 10 Spanish players with the most caps
-    :param top_goals: List of top 10 all time goalscorers
-    :param random_tenaball: will select one of the categories at random
-    :param category: The string of the randomly selected category.
-    :param correct_answer: List used during to track correctly guessed players
-    :param lives: Number of lives that the player has
-    :param position: Shows which number the guessed player takes on that list
-    :return: None
+    This game challenges the player to guess the top 10 footballers in a randomly selected category.
+    The player has 3 lives to complete the list and must guess each player's full name correctly.
+    The game includes a variety of predefined categories such as top goalscorers, most national caps, 
+    and top signings. The game tracks correct guesses, provides feedback, and indicates when a player loses or wins.
     """
     #each category has been chosen one by one
     #barcelonas most expensive signings
 
-    barcelona_signings = ["Philippe Coutinho", "Ousmane Dembele", "Antoine Griezmann", "Neymar Jr", "Frenkie de Jong", "Luis Suarez", "Zlatan Ibrahimovic"]
+    barcelona_signings = ["Philippe Coutinho", "Ousmane Dembele", "Antoine Griezmann", "Neymar Jr", "Frenkie de Jong", "Luis Suarez", "Zlatan Ibrahimovic", "Miralem Pjanic", "Raphinha", "Dani Olmo"]
 
     #most appearances with keeper David de Gea
 
@@ -28,7 +19,7 @@ def tenaball():
 
     #most combined games for Real Madrid and Juventus
 
-    juve_real = ["Cristiano Ronaldo", "Zinedine Zidane", "Gonzalo Higuain", "Alvaro Morata", "Sami Khedira", "Danilo", "Fabio Cannavaro", " Angel Di Maria", "Emereson", "Micheal Laudrup"]
+    juve_real = ["Cristiano Ronaldo", "Zinedine Zidane", "Gonzalo Higuain", "Alvaro Morata", "Sami Khedira", "Danilo", "Fabio Cannavaro", "Angel Di Maria", "Emerson", "Micheal Laudrup"]
 
     #most spanish national team appearances
 
@@ -67,18 +58,27 @@ def tenaball():
     correct_answer = []
     lives = 3
 
+    #Scoreboard object so the player can see each time what player he guessed right
+    reveal_ans = ["?" for _ in random_tenaball]
+
     #starting the game
     print("Welcome to our Tenaball game mode")
-    play = input(f"do you want to play or exit?")
+    play = input("Do you want to play or exit?")
     if play == "exit":
         print("Bye!")
         return
     else:
         print(f"find the top 10 {category}")
 
+
         while lives > 0 and len(correct_answer) < 10:
             print(f"\nYou have {lives} lives left")
-            player = input("Enter a player's full name")
+
+            print("tenaball tower:")
+            for i, name in enumerate(reveal_ans, start = 1):
+                print(f"{i}. {name}")
+
+            player = input("Enter a player's full name: ")
 
         #check if guessed player is in the top 10
             if player in random_tenaball and player not in correct_answer:
@@ -86,6 +86,7 @@ def tenaball():
                 position = random_tenaball.index(player) + 1
                 print(f"You guessed {player} correctly, he is number {position} on the list")
                  #will then add the correct player to the list
+                reveal_ans[position-1] = player
                 correct_answer.append(player)
                 lives = 3
 
