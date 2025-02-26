@@ -1,2 +1,2 @@
 # Budget version of footy tenaball
-#### idea taken from playfootball.games
+#### idea developed from "playfootball.games" an onlinen football game platform.

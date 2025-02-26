@@ -73,8 +73,6 @@ def tenaball():
     
     #anything else will start the game
     else:
-        print(f"find the top 10 {category}")
-
     #will start a loop that will keep going as long as lives are not 0 or the amount of player guessed is less than 10
         while lives > 0 and len(correct_answer) < 10:
             print(f"\nYou have {lives} lives left")
@@ -83,6 +81,7 @@ def tenaball():
             print("tenaball tower:")
             for i, name in enumerate(reveal_ans, start = 1):
                 print(f"{i}. {name}")
+            print(f"find the top 10 {category}")
 
             player = input("Enter a player's full name: ")
 
@@ -117,6 +116,7 @@ def tenaball():
             print("\nYou beat the Tenaball")
 
         #or it will also stop if lives reach zero
+        
         else:
             print("\nThe Tenaball beat you")
             print(f"The correct players were:")
@@ -124,10 +124,13 @@ def tenaball():
                 print(f"{position}. {player}")
 
 
+
+
 #if to allow the code to run
 if __name__ == "__main__":
     tenaball()
 
+#create a rolling dice game
 
 
 
