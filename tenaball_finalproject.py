@@ -7,6 +7,17 @@ def tenaball():
     The player has 3 lives to complete the list and must guess each player's full name correctly.
     The game includes a variety of predefined categories such as top goalscorers, most national caps, 
     and top signings. The game tracks correct guesses, provides feedback, and indicates when a player loses or wins.
+    :param barcelona_signings: A list of the top 10 most expensive signings for Fc Barcelona.
+    :param degea_app: A list of the top 10 players with the most appearances with teammate David de Gea.
+    :param juve_real: A list of the top 10 players with the most appearances for Juventus and Real Madrid.
+    :param spain_app: A list of the top 10 players with the most caps for the Spanish National Team.
+    :param top_goals: A list of the top 10 all time goalscorers.
+    :param antony_app: A list of the top 10 players with the most appearances with teammate Antony.
+    :param ancelotti_used: A list of the top 10 players with the most appearances under coach Ancelotti at Real Madrid.
+    :param lEnrique_used: A list of the top 10 players with the most appearances under coach lEnrique at Fc Barcelona.
+    :param manu_managers: A list of the last 10 managers to coach Manchester United after Sir Alex Ferguson.
+    :param ronaldo_assist: A list of the top 10 players that have provided the most assists to Cristiano Ronaldo.
+    :return: None
     """
     #each category has been chosen one by one
     #barcelonas most expensive signings
@@ -19,7 +30,7 @@ def tenaball():
 
     #most combined games for Real Madrid and Juventus
 
-    juve_real = ["Cristiano Ronaldo", "Zinedine Zidane", "Gonzalo Higuain", "Alvaro Morata", "Sami Khedira", "Danilo", "Fabio Cannavaro", "Angel Di Maria", "Emerson", "Micheal Laudrup"]
+    juve_real = ["Cristiano Ronaldo", "Zinedine Zidane", "Gonzalo Higuain", "Alvaro Morata", "Sami Khedira", "Danilo", "Fabio Cannavaro", "Di Maria", "Emerson", "Micheal Laudrup"]
 
     #most spanish national team appearances
 
@@ -41,7 +52,13 @@ def tenaball():
 
     lEnrique_used = ["Lionel Messi", "Luis Suarez", "Neymar Jr", "Sergio Busquets", "Gerard Pique", "Javier Mascherano", "Ivan Rakitic", "Jordi Alba", "Andres Iniesta", "Ter Stegen"]
 
+    manu_managers = ["Ruben Amorim", "Ruud Van Nistelrooy", "Ten Hag", "Ralf Rangnick", "Michael Carrick", "Ole Gunnar Solskjaer", "Jose Mourinho", "Louis Van Gaal", "Ryan Giggs", "David Moyes"]
+
+    ronaldo_assist = ["Karim Benzema", "Mesut Ozil", "Gareth Bale", "Di Maria", "Marcelo", "Ryan Giggs", "Gonzalo Higuain", "Isco", "Kaka", "Lucas Vazquez"]
+
+
     # Code to randomly choose the tenaball category and its list for the game
+
 
     random_tenaball, category  = random.choice([
         (barcelona_signings, "most expensive barça signings"),
@@ -52,6 +69,8 @@ def tenaball():
         (antony_app, "players with most appearances with teammate Antony"),
         (ancelotti_used, "most used players by coach Ancelotti at Real Madrid"),
         (lEnrique_used, "most used players by coach lEnrique at Fc Barcelona"),
+        (manu_managers, "managers to have coached Manchester United after Sir Alex Ferguson"),
+        (ronaldo_assist, "players that have provided the most assists to teammate Cristiano Ronaldo"),
     ])
 
     #so that we can track how many the player has guessed
