@@ -116,7 +116,7 @@ def tenaball():
             print("\nYou beat the Tenaball")
 
         #or it will also stop if lives reach zero
-        
+
         else:
             print("\nThe Tenaball beat you")
             print(f"The correct players were:")
@@ -130,7 +130,6 @@ def tenaball():
 if __name__ == "__main__":
     tenaball()
 
-#create a rolling dice game
 
 
 
