@@ -7,16 +7,7 @@ def tenaball():
     The player has 3 lives to complete the list and must guess each player's full name correctly.
     The game includes a variety of predefined categories such as top goalscorers, most national caps, 
     and top signings. The game tracks correct guesses, provides feedback, and indicates when a player loses or wins.
-    :param barcelona_signings: A list of the top 10 most expensive signings for Fc Barcelona.
-    :param degea_app: A list of the top 10 players with the most appearances with teammate David de Gea.
-    :param juve_real: A list of the top 10 players with the most appearances for Juventus and Real Madrid.
-    :param spain_app: A list of the top 10 players with the most caps for the Spanish National Team.
-    :param top_goals: A list of the top 10 all time goalscorers.
-    :param antony_app: A list of the top 10 players with the most appearances with teammate Antony.
-    :param ancelotti_used: A list of the top 10 players with the most appearances under coach Ancelotti at Real Madrid.
-    :param lEnrique_used: A list of the top 10 players with the most appearances under coach lEnrique at Fc Barcelona.
-    :param manu_managers: A list of the last 10 managers to coach Manchester United after Sir Alex Ferguson.
-    :param ronaldo_assist: A list of the top 10 players that have provided the most assists to Cristiano Ronaldo.
+    Function takes no parameters.
     :return: None
     """
     #each category has been chosen one by one
